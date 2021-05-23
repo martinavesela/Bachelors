@@ -1,0 +1,368 @@
+#root {
+    --blue: #6897bb;
+    --code-background: #2b2b2b;
+    --code-bar: #313335;
+    --dark-blue: #3c3f46;
+    --darker-blue: #282b32;
+    --dark-green: #526944;
+    --dark-orange: #a45e28;
+    --green: #6a8759;
+    --muted-blue: #4a7ea5;
+    --light-blue: #a9b7c6;
+    --orange: #cc7732;
+    --white: #fff;
+    height: 100%;
+}
+
+.accordion-collapse {
+    background-color: var(--dark-blue);
+}
+
+.accordion-toggle {
+    color: var(--white);
+    background-color: var(--dark-blue);
+    text-decoration: underline;
+    text-align: center;
+}
+
+.accordion-toggle:hover {
+    color: var(--light-blue);
+}
+
+.accordion-solution {
+    padding-top: 5px;
+    padding-bottom: 0;
+}
+
+.App {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+body {
+    height: 100vh;
+}
+
+.box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.button {
+    height: 35px;
+    width: 100px;
+    margin-left: 5px;
+    margin-right: 5px;
+    box-shadow: none;
+}
+
+.button-blue,
+.button-blue:disabled,
+.button-blue:focus,
+.button-blue:active {
+    box-shadow: none !important;
+    background-color: var(--blue) !important;
+    border-color: var(--muted-blue) !important;
+}
+
+.button-blue:hover {
+    box-shadow: none !important;
+    background-color: var(--muted-blue) !important;
+    border-color: var(--muted-blue) !important;
+}
+
+.button-disabled {
+    box-shadow: none !important;
+    background-color: var(--blue) !important;
+    border-color: var(--muted-blue) !important;
+}
+
+.button-dropdown {
+    background-color: var(--blue);
+    border-color: var(--muted-blue)
+}
+
+.button-dropdown-item {
+    color: var(--white);
+}
+
+.button-dropdown-item:focus,
+.button-dropdown-item:hover {
+    color: var(--white);
+    background-color: var(--muted-blue);
+}
+
+.button-green,
+.button-green:disabled,
+.button-green:focus {
+    box-shadow: none;
+    background-color: var(--green);
+    border-color: var(--green);
+}
+
+.button-green:active,
+.button-green:hover {
+    box-shadow: none !important;
+    background-color: var(--dark-green) !important;
+    border-color: var(--dark-green) !important;
+}
+
+.button-orange,
+.button-orange:disabled,
+.button-orange:focus {
+    box-shadow: none;
+    background-color: var(--orange);
+    border-color: var(--orange);
+}
+
+.button-orange:active,
+.button-orange:hover {
+    box-shadow: none !important;
+    background-color: var(--dark-orange) !important;
+    border-color: var(--dark-orange) !important;
+}
+
+.buttons {
+    background-color: var(--code-bar);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.buttons-lesson {
+    background-color: var(--code-background);
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.buttons-height {
+    height: 81px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-blue {
+    background-color: var(--blue);
+}
+
+.card-generic {
+    font-size: 1em;
+    margin-bottom: 1em;
+    color: var(--white);
+}
+
+.card-orange {
+    background-color: var(--orange);
+    text-align: right;
+}
+
+.CodeMirror-scrollbar-filler {
+    background-color: var(--code-bar) !important;
+}
+
+.CodeMirror-selected {
+    background-color: var(--muted-blue) !important;
+}
+
+.column-app-first {
+    background-color: var(--code-background);
+    border-radius: 0 0 5px 5px;
+    padding: 0.75em;
+    font-size: 1em;
+    color: var(--light-blue);
+    height: calc(100%);
+}
+
+.column-left {
+    border-right: 1px solid var(--light-blue);
+    text-align: right;
+    width: 30%;
+    padding: 0.5em 1.25em 0.5em 0;
+}
+
+.column-right {
+    border-left: 1px solid var(--light-blue);
+    text-align: left;
+    width: 30%;
+    padding: 0.5em 0 0.5em 1.5em;
+}
+
+.column-thirds {
+    width: 33%;
+}
+
+.container-parent {
+    overflow: auto;
+}
+
+.custom-handle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 3px;
+    right: 3px;
+    background: url("handle.svg") no-repeat bottom right;
+    background-size: 10px;
+    cursor: se-resize;
+}
+
+.header-language {
+    background-color: var(--code-bar);
+    border-radius: 5px;
+    color: var(--light-blue);
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.header-app {
+    color: var(--white);
+    text-align: left;
+    padding-bottom: 0.5em;
+}
+
+.height-100-percent {
+    height: 100%;
+}
+
+.height-95-percent {
+    height: 95%;
+}
+
+.height-70-percent {
+    height: 70%;
+}
+
+.height-25-percent {
+    height: 21%;
+}
+
+.height-5-percent {
+    height: 5%;
+}
+
+.height-1-percent {
+    height: 1%;
+}
+
+.lesson-height {
+    max-height: calc(100% - 86px - 1em)
+}
+
+#link-blue-to-white {
+    color: var(--light-blue);
+    text-decoration: underline;
+}
+
+#link-blue-to-white:hover {
+    color: var(--white);
+}
+
+#link-white-to-blue {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+#link-white-to-blue:hover {
+    color: var(--light-blue);
+}
+
+.main-text {
+    color: var(--light-blue);
+    font-size: 1.4em;
+}
+
+.nav {
+    background-color: var(--darker-blue);
+    padding: 1em;
+}
+
+.nav-item {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.nav-row-1 {
+    color: var(--white);
+    font-size: 2em;
+    margin-right: 1em;
+}
+
+.nav-row-1:hover,
+.nav-row-2:hover {
+    color: var(--blue);
+}
+
+.nav-row-2 {
+    color: var(--light-blue);
+    font-size: 1em;
+    font-weight: 700;
+    margin-right: 1em;
+}
+
+.new-line {
+    white-space: pre-wrap;
+}
+
+::selection {
+    background: var(--muted-blue);
+}
+
+.show > .btn-primary.dropdown-toggle {
+    box-shadow: none !important;
+    background-color: var(--muted-blue);
+    border-color: var(--muted-blue);
+}
+
+.table {
+    color: var(--white);
+}
+
+.text-off-white {
+    color: var(--light-blue);
+}
+
+.text-overflow {
+    overflow: auto;
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.window {
+    background-color: var(--darker-blue);
+    border-radius: 5px;
+    padding: 1em;
+    margin-top: 1em;
+    color: var(--light-blue);
+    font-size: 1em;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: var(--code-bar);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--code-bar);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--light-blue);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue);
+}

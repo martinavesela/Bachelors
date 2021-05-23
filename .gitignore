@@ -1,0 +1,9 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+/.idea/
+/node_modules/
+package.json
+/build
+*.pyc
+/build/
