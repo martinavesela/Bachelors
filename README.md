@@ -1,53 +1,90 @@
-# Getting Started with Create React App
+# Web application for learning a programming language using another programming language
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the repository for my Bachelors application.
 
-## Available Scripts
+[Link to the apllications website](http://www.st.fmph.uniba.sk/~vesela50/#/)
 
-In the project directory, you can run:
+# How to Install
 
-### `npm start`
+## 1. Install Git Bash
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This step isn't mandatory but makes the installation easier. You can use any terminal.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 2. Install Docker Desktop
 
-### `npm test`
+- If an error about virtualisation pops up, follow the instructions on the linked page.
+- If you don't have enabled virtualisation in BIOS, do so.
+- When a window appears telling you to install WSL2, follow the instructions on the linked page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more
-information.
+## 3. Install Python
+- If the installation doesn' add Python to Path, you'll have to do it manually:
+1. Open *Edit the system environmental variables*.
+2. Press *Environmental Variables*.
+3. In *System variables* select *path* and press *Edit*.
+4. Add the path to Python.
 
-### `npm run build`
+## 4. Install PostgreSQL
+- The password chosen during the installation will be used for logging in to the database.
+- Add PostgreSQL to Path.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 5. Install npm
+- npm is included in Node.js installation.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 6. Build Docker Containers
+1. In folder *run-java* (path: ./server/run-java/) open Git Bash terminal.
+2. Enter the following expression: `docker build -t runjava .`
+3. Do this in run-python, test-java and test-python folders, but adjust the expression with *runpython*, *testjava* or *testpython*.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 7. Running the website
+- In the main folder of the application open Git Bash terminal.
+- Enter the following commands:
+```
+nmp installreact-scripts
+npm audit fix
+npm start
+```
+- Leave the terminal open.
 
-### `npm run eject`
+## 8. Running the database
+- In folder *database* (path: ./server/database/) create a file *database.ini* with the following content:
+```
+[postgresql]
+host=localhost
+database=mydatabase
+user=postgres
+password=
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+- after *password=* enter the password you have set during the installation of PostgreSQL.
+- Open Git Bash terminal in the same folder.
+- Enter the following commands: (after the first one you'll be asked to enter the password)
+```
+psql -U postgres
+CREATE DATABASE myDatabase WITH ENCODING ’UTF8’ LC\_COLLATE=’English\_United States’ LC\_CTYPE=’English\_United States’;
+\c mydatabase
+\i ’create\_script.sql’;
+\i ’generate\_script.sql’;
+```
+- Leave the terminal open.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will
-remove the single build dependency from your project.
+## 9. Run the application
+- In folder *./server/* open Git Bash terminal.
+- Enter the following commands:
+```
+pip install flask
+pip install docker
+pip install six
+pip install psycopg2
+python main.py
+```
+- Leave the terminal open.
+- If the application isn't able to create files inside of *./server/mount/* folder then set it's Read-only setting to false.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right
-into your project so you have full control over them. All of the commands except `eject` will still work, but they will
-point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you
-shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t
-customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in
-the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 10. Repeated runs
+- For running the website you only need `npm start` command in the main folder of the application.
+- For running the database you'll need the following commands:
+```
+psql -U postgres
+\c mydatabase
+```
+- For running the application you only need `python main.py` command inside of *./server/* folder.
