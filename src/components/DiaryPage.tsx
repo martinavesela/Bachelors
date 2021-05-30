@@ -127,6 +127,14 @@ export const DiaryPage: React.FC = () => {
               • implementovanie limitácie veľkosti súboru
             </Col>
           </Row>
+          <Row>
+            <Col className="column-left">
+              Týždeň 18.5. - 24.5.
+            </Col>
+            <Col className="column-right">
+              • dokončenie písania bakalárskej práce
+            </Col>
+          </Row>
         </Container>
       </div>
     </>

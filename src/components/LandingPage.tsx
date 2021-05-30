@@ -54,7 +54,7 @@ export const LandingPage: React.FC = () => {
                   Východisková kapitola práce
                 </Button>
                 <Button className="button-blue"
-                        href={"/~vesela50/zdrojovy-kod.zip"}
+                        href={"https://github.com/martinavesela/bachelors"}
                         target="_blank">
                   Zdrojový kód
                 </Button>
