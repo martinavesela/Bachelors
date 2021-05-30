@@ -2,7 +2,7 @@
 
 This is the repository for my Bachelors application.
 
-[Link to the apllications website](http://www.st.fmph.uniba.sk/~vesela50/#/)
+[Link to the applications website](http://www.st.fmph.uniba.sk/~vesela50/#/)
 
 # How to Install
 
@@ -17,7 +17,7 @@ This step isn't mandatory but makes the installation easier. You can use any ter
 - When a window appears telling you to install WSL2, follow the instructions on the linked page.
 
 ## 3. Install Python
-- If the installation doesn' add Python to Path, you'll have to do it manually:
+- If the installation doesn't add Python to Path, you'll have to do it manually:
 1. Open *Edit the system environmental variables*.
 2. Press *Environmental Variables*.
 3. In *System variables* select *path* and press *Edit*.
@@ -39,7 +39,7 @@ This step isn't mandatory but makes the installation easier. You can use any ter
 - In the main folder of the application open Git Bash terminal.
 - Enter the following commands:
 ```
-nmp installreact-scripts
+nmp install react-scripts
 npm audit fix
 npm start
 ```
